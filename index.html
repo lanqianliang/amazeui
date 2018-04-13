@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/wap.css">
+    <title>内容页</title>
+</head>
+<div style="background:#ececec">
+<div class="pet_mian" >
+<div class="pet_content">
+<div class="pet_content_block">
+  <article data-am-widget="paragraph" class="am-paragraph am-paragraph-default pet_content_article am-no-layout" data-am-paragraph="{ tableScrollable: true, pureview: true }">
+  <h1 class="pet_article_title">你认识萌萌的小熊猫吗？</h1>
+  <div class="pet_article_user_time">发表于：2015-09-25</div>
+      <p style="text-align: center;">
+          <img src="http://api.hezhong6666.com/uploads/editor/image/20180228/1d3ff566514802602d46dfb9c65e9e33.png" title="20180228/1d3ff566514802602d46dfb9c65e9e33.png" alt="1d3ff566514802602d46dfb9c65e9e33.png"/><img src="http://api.hezhong6666.com/uploads/editor/image/20180228/ec09c8d6aa1d79b0a6b32084308ae136.png" title="20180228/ec09c8d6aa1d79b0a6b32084308ae136.png" alt="ec09c8d6aa1d79b0a6b32084308ae136.png"/><img src="http://api.hezhong6666.com/uploads/editor/image/20180228/36b37866a206cb6d14812ba4644b8a9b.png" title="20180228/36b37866a206cb6d14812ba4644b8a9b.png" alt="36b37866a206cb6d14812ba4644b8a9b.png"/>
+      </p>
+      <p>
+          <br/>
+      </p>
+      <p>
+          <span style="font-size: 18px;">来源：<a href="http://www.fire-testing.net/index.php?c=article&a=detail&id=177" target="_self" style="color: rgb(84, 141, 212); text-decoration: underline;"><span style="font-size: 18px; color: rgb(84, 141, 212);">国家防火建筑材料质量监督检验中心 CCC强制性产品认证检验业务受理流程 &gt;&gt;</span></a></span>
+      </p>
+
+  </article>
+</div>
+</div>
+</div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script>
+$(function(){
+
+    // 动态计算新闻列表文字样式
+    auto_resize();
+    $(window).resize(function() {
+        auto_resize();
+    });
+    $('.am-list-thumb img').load(function(){
+        auto_resize();
+    });
+    $('.pet_article_like li:last-child').css('border','none');
+        function auto_resize(){
+        $('.pet_list_one_nr').height($('.pet_list_one_img').height());
+                // alert($('.pet_list_one_nr').height());
+    }
+        $('.pet_article_user').on('click',function(){
+            if($('.pet_article_user_info_tab').hasClass('pet_article_user_info_tab_show')){
+                $('.pet_article_user_info_tab').removeClass('pet_article_user_info_tab_show').addClass('pet_article_user_info_tab_cloes');
+            }else{
+                $('.pet_article_user_info_tab').removeClass('pet_article_user_info_tab_cloes').addClass('pet_article_user_info_tab_show');
+            }
+        });
+
+        $('.pet_head_gd_ico').on('click',function(){
+            $('.pet_more_list').addClass('pet_more_list_show');
+       });
+        $('.pet_more_close').on('click',function(){
+            $('.pet_more_list').removeClass('pet_more_list_show');
+        });
+});
+
+</script>
+</html>
